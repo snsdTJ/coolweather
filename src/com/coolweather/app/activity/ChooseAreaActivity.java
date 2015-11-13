@@ -97,7 +97,8 @@ public class ChooseAreaActivity extends Activity {
 		
 		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 		
-		//已经选择了城市切不是从WeatherActivity跳转过来，才会直接跳转到WeatherActivity
+		//这个程序是默认一打开应用就直接进入上一次退出时打开的县的天气界面，
+		//已经选择了城市且不是从WeatherActivity跳转过来，才会直接跳转到WeatherActivity
 		if (prefs.getBoolean("city_selected", false)&&!isFromWeaterActivity) {
 			Intent intent = new Intent(this, WeatherAcitivty.class);
 			startActivity(intent);

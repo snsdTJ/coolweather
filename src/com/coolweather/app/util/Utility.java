@@ -119,7 +119,9 @@ public class Utility {
 			String temp2 = weatherInfo.getString("temp2");
 			String weatherDesp = weatherInfo.getString("weather");
 			String publishTime = weatherInfo.getString("ptime");
+			
 			saveWeatherInfo(context, cityName, weatherCode, temp1, temp2, weatherDesp, publishTime);
+			
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
